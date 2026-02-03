@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anne Frank: A Voice from the Shadows</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Load extracted PDF context -->
+    <script src="assets/context.js"></script>
+</head>
+
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="loader-content">
+            <span class="loader-text">"I still believe, in spite of everything, that people are truly good at
+                heart."</span>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">Anne Frank</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#biography">Biography</a></li>
+            <li><a href="#themes">Themes</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+        </ul>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-bg" style="background-image: url('assets/hero.png');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="fade-in-up">The Diary of a Young Girl</h1>
+            <p class="fade-in-up delay-1">Explore the life, thoughts, and enduring legacy of Anne Frank.</p>
+            <a href="#biography" class="btn fade-in-up delay-2">Begin Journey</a>
+        </div>
+    </header>
+
+    <!-- Biography Section -->
+    <section id="biography" class="section bio-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Her Story</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="bio-grid">
+                <div class="bio-text fade-in-left">
+                    <p>Anne Frank was a German-born Jewish girl who kept a diary in which she documented life in hiding
+                        under Nazi persecution during World War II. She is a celebrated diarist who described ordinary
+                        thoughts and feelings in extraordinary times.</p>
+                    <p>For two years, she and her family hid in the "Secret Annex" in Amsterdam. Her diary, which she
+                        received for her 13th birthday, chronicles her development from a girl into a young woman,
+                        offering a poignant and personal perspective on the Holocaust.</p>
+                </div>
+                <div class="bio-image fade-in-right">
+                    <!-- Placeholder using the hero image again if no other portrait is available, or use a div with style -->
+                    <img src="assets/hero.png" alt="Anne Frank" style="filter: sepia(0.5) contrast(1.2);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Themes Section Removed per user request -->
+
+    <!-- Media Gallery Section -->
+    <section id="gallery" class="section gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Media Gallery</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="media-grid">
+                <div class="media-item video-container fade-in-up">
+                    <h3>Documentary Title</h3>
+                    <video controls poster="assets/hero.png">
+                        <source src="assets/video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <div class="media-item audio-container fade-in-up delay-1">
+                    <h3>The Full Story</h3>
+                    <div class="audio-player">
+                        <audio controls>
+                            <source src="assets/audio.m4a" type="audio/mp4">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                    <p class="audio-caption">Listen to the full story of Anne Frank's diary.</p>
+                </div>
+
+                <div class="media-item pdf-container fade-in-up delay-2">
+                    <h3>Detailed Study Guide</h3>
+                    <p>Read the comprehensive guide about the book and website.</p>
+                    <a href="assets/document.pdf" target="_blank" class="btn secondary">View PDF Document</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chat Section -->
+    <section id="chat" class="section chat-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Talk with Anne</h2>
+                <div class="divider"></div>
+                <p class="section-subtitle">"I want to go on living even after my death! And that's why I'm so grateful
+                    to God for having given me this gift..."</p>
+            </div>
+
+            <div class="chat-container fade-in-up">
+                <div class="chat-window" id="chat-window">
+                    <div class="message system-message">
+                        Hello! I am Anne. Ask me anything about my life, my thoughts, or my diary.
+                    </div>
+                </div>
+                <div class="chat-input-area">
+                    <input type="text" id="user-input" placeholder="Type your message to Anne..." autocomplete="off">
+                    <button id="send-btn" class="btn">Send</button>
+                </div>
+                <div class="security-note">
+                    <i class="fas fa-lock"></i> Note: Start by entering your <a
+                        href="https://aistudio.google.com/app/apikey" target="_blank">Gemini API Key</a> in the settings
+                    (gear icon) or script.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>"How wonderful it is that nobody need wait a single moment before starting to improve the world."</p>
+            <p class="copyright">&copy; 2026 Anne Frank Tribute Project. Educational Purposes Only.</p>
+            <div class="socials">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Lightbox Modal -->
+    <div id="image-modal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="caption"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
